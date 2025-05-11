@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: 'Arial', sans-serif;
+            background-color: #0a192f;
+            background-image: 
+                radial-gradient(circle at 25px 25px, rgba(255, 255, 255, 0.2) 2%, transparent 0%),
+                radial-gradient(circle at 75px 75px, rgba(255, 255, 255, 0.2) 2%, transparent 0%);
+            background-size: 100px 100px;
+            padding: 20px;
+        }
+
+        .container-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            width: 90%;
+            max-width: 1200px;
+            margin: 40px auto;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            backdrop-filter: blur(5px);
+            color: white;
+            min-height: 200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .container:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .container h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #1e90ff;
+        }
+
+        .back-button {
+            padding: 8px 16px;
+            background-color: rgba(30, 144, 255, 0.3);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .back-button:hover {
+            background-color: rgba(30, 144, 255, 0.5);
+        }
+    </style>
+    <script>
+        function redirectToPage(pageUrl) {
+            window.location.href = pageUrl;
+        }
+    </script>
+</head>
+<body>
+    <a href="genre.html" class="back-button">Back</a>
+    <h1 style="color: white; text-align: center; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); font-size: 2.5rem; margin-top: 2rem;">MYSTERY</h1>
+    <div class="container-grid">
+        <div class="container" onclick="redirectToPage('mystery1.html')">
+            <h2>Story Beginning</h2>
+            <p>Create and explore the initial part of your story</p>
+        </div>
+        <div class="container" onclick="redirectToPage('mystery2.html')">
+            <h2>Multiple Endings</h2>
+            <p>Discover different possible endings for your story</p>
+        </div>
+        <div class="container" onclick="redirectToPage('mystery3.html')">
+            <h2>Analyze Differences</h2>
+            <p>Compare and analyze various story versions</p>
+        </div>
+        <div class="container" onclick="redirectToPage('mystery4.html')">
+            <h2>Final Version</h2>
+            <p>View and polish your completed story</p>
+        </div>
+    </div>
+</body>
+</html>
